@@ -5,12 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.chenw</groupId>
-        <artifactId>C-base-common</artifactId>
+        <artifactId>C-user</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>C-base-common-oss</artifactId>
+    <artifactId>C-user-api</artifactId>
+    <packaging>jar</packaging>
+
+    <description> c-user 公共API模块</description>
 
 
 </project>
