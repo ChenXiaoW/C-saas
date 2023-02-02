@@ -45,6 +45,8 @@
         <C-base-common-datasource.version>1.0-SNAPSHOT</C-base-common-datasource.version>
         <C-base-common-core.version>1.0-SNAPSHOT</C-base-common-core.version>
 
+        <C-user-api.version>1.0-SNAPSHOT</C-user-api.version>
+
     </properties>
 
     <!--
@@ -108,6 +110,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>transmittable-thread-local</artifactId>
                 <version>${transmittable-thread-local.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.chenw</groupId>
+                <artifactId>C-user-api</artifactId>
+                <version>${C-user-api.version}</version>
             </dependency>
 
         </dependencies>

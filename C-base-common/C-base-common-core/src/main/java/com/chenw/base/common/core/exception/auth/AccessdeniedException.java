@@ -5,7 +5,7 @@ import com.chenw.base.common.core.exception.BaseException;
 
 /**
  * @ClassName: AccessdeniedException
- * @Description: AccessdeniedException
+ * @Description: 拒绝访问异常
  * @Author ChenXiaoW
  * @Date 2023/01/04 - 22:52
  */
