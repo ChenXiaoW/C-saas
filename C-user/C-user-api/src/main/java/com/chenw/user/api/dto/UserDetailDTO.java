@@ -1,10 +1,11 @@
 package com.chenw.user.api.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.chenw.user.api.entity.SysPermissionInfo;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @ClassName: UserSecurityDTO
@@ -13,7 +14,7 @@ import java.util.Date;
  * @Date 2023/02/02 - 22:41
  */
 @Data
-public class UserSecurityDTO {
+public class UserDetailDTO {
 
     /**
      * 主键ID
@@ -84,4 +85,9 @@ public class UserSecurityDTO {
      * 删除标记：0-否，1-是
      */
     private Boolean delFlag;
+
+    /**
+     * 用户接口权限Code
+     */
+    private Set<String> userPermissions;
 }

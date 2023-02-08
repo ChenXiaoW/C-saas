@@ -14,20 +14,10 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "jwt")
 public class JwtProperties {
 
-    private String secret;
-
     private Long expiration = 60*60*24*7L;
-
-    public void setSecret(String secret) {
-        this.secret = secret;
-    }
 
     public void setExpiration(Long expiration) {
         this.expiration = expiration;
-    }
-
-    public String getSecret() {
-        return secret;
     }
 
     public Long getExpiration() {

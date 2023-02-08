@@ -30,9 +30,14 @@ public class Response<T> implements Serializable {
     private static final String FAIL_MSG = BaseCodeEnum.FAIL.getMessage();
 
     /**
+     * 服务名称
+     */
+    private String serviceName;
+
+    /**
      * 业务码
      */
-    private int code;
+    private Integer code;
 
     /**
      * 业务信息
@@ -44,6 +49,25 @@ public class Response<T> implements Serializable {
      */
     private T data;
 
+    public Integer getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
 
     public static <T> Response<T> success(){
         return new Response<>(SUCCESS_CODE,SUCCESS_MSG,null);
@@ -66,4 +90,5 @@ public class Response<T> implements Serializable {
         this.message = message;
         this.data = data;
     }
+
 }

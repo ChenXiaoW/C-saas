@@ -1,6 +1,7 @@
 package com.chenw.user.biz.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.chenw.user.api.dto.UserDetailDTO;
 import com.chenw.user.api.entity.SysUserInfo;
 import com.chenw.user.biz.vo.InsertOrUpdateSysUserInfoVO;
 
@@ -21,4 +22,11 @@ public interface SysUserInfoService extends IService<SysUserInfo> {
      */
     String insertSysUserInfo(InsertOrUpdateSysUserInfoVO vo);
 
+
+    /**
+     * 查询用户详情用于鉴权
+     * @param userId 用户ID
+     * @return
+     */
+    UserDetailDTO queryUserDetailToSecurity(String userId);
 }

@@ -19,6 +19,12 @@
             <artifactId>transmittable-thread-local</artifactId>
         </dependency>
 
+        <!-- SpringCloud Openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

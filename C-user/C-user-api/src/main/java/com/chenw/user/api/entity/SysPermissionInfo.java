@@ -82,6 +82,11 @@ public class SysPermissionInfo extends Model<SysPermissionInfo> {
      */
     private Boolean delFlag;
 
+    /**
+     * 是否需要权限：0-否，1-是
+     */
+    private Boolean hasPermission;
+
 
     @Override
     protected Serializable pkVal() {

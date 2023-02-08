@@ -19,6 +19,7 @@ import java.util.Map;
 **/
 public class JwtUtil {
 
+
     private static final String secret = TokenConstants.SECRET;
 
     /**
