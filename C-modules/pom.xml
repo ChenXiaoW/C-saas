@@ -12,7 +12,8 @@
     <artifactId>C-modules</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>C-modules-oss</module>
+        <module>C-module-oss</module>
+        <module>C-module-sms</module>
     </modules>
 
     <properties>

@@ -3,6 +3,7 @@ package com.chenw.user.biz.vo;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @ClassName: InsertOrUpdateSysUserInfoVO
@@ -47,5 +48,10 @@ public class InsertOrUpdateSysUserInfoVO {
      * 密码
      */
     private String password;
+
+    /**
+     * 角色ID列表
+     */
+    private List<String> roleIds;
 
 }

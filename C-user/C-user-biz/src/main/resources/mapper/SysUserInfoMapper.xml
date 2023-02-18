@@ -2,5 +2,51 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chenw.user.biz.dao.SysUserInfoDao">
 
-
+    <resultMap id="SysUserInfoVOMap" type="com.chenw.user.biz.vo.SysUserInfoVO">
+        <id column="id" property="id" />
+        <result column="user_name" property="userName" />
+        <result column="gender" property="gender" />
+        <result column="avatar" property="avatar" />
+        <result column="mobile" property="mobile" />
+        <result column="state" property="state" />
+        <result column="account" property="account" />
+        <result column="create_by" property="createBy" />
+        <result column="update_by" property="updateBy" />
+        <collection property="sysRoleInfos" ofType="com.chenw.user.api.entity.SysRoleInfo">
+            <id column="roleId" property="id" />
+            <result column="roleName" property="roleName"/>
+        </collection>
+    </resultMap>
+<select id="queryPage" resultMap="SysUserInfoVOMap">
+    select t1.id,
+           t1.user_name,
+           t1.gender,
+           t1.avatar,
+           t1.mobile,
+           t1.state,
+           t1.account,
+           t1.create_by,
+           t1.update_by,
+           t3.id        as roleId,
+           t3.role_name as roleName
+    from sys_user_info t1
+             left join sys_user_relate_role t2 on t1.id = t2.user_id
+             left join sys_role_info t3 on t2.role_id = t3.id
+    where t1.del_flag = 0
+      and t2.del_flag = 0
+      and t3.del_flag = 0
+      and t3.state = 1
+    <if test="params.userName !=null and params.userName !=''">
+        and t1.user_name like concat('%',#{params.userName},'%')
+    </if>
+    <if test="params.account !=null and params.account !=''">
+        and t1.account like concat('%',#{account},'%')
+    </if>
+    <if test="params.state !=null">
+        and t1.state = #{params.state}
+    </if>
+    <if test="params.roleId !=null">
+        and t3.id = #{params.roleId}
+    </if>
+    </select>
 </mapper>

@@ -26,7 +26,17 @@ public enum BaseCodeEnum {
     /**
      * 访问被拒绝
      */
-    ACCESSDENIED(403, "not permission"),;
+    ACCESSDENIED(403, "not permission"),
+
+    /**
+     * 查询不到数据
+     */
+    NO_DATA(5001,"query no data"),
+    /**
+     * 数据已存在
+     */
+    DATA_EXISTS(5001,"data already exists"),
+    ;
 
     private Integer code;
 

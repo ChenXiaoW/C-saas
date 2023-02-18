@@ -2,6 +2,7 @@ package com.chenw.user.api.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -24,7 +25,6 @@ public class SysRoleInfo extends Model<SysRoleInfo> {
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id",type = IdType.ASSIGN_ID)
-
     private String id;
 
     /**
@@ -70,6 +70,7 @@ public class SysRoleInfo extends Model<SysRoleInfo> {
     /**
      * 删除标记：0-否，1-是
      */
+    @TableLogic
     private Boolean delFlag;
 
 

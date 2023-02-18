@@ -2,6 +2,7 @@ package com.chenw.user.api.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -60,6 +61,7 @@ public class SysUserRelateRole extends Model<SysUserRelateRole> {
     /**
      * 删除标记：0-否，1-是
      */
+    @TableLogic
     private Boolean delFlag;
 
 
